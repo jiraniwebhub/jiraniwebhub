@@ -1,92 +1,213 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* Reset and base styles */
+* {
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
   color: #333;
+  padding-top: 80px;
 }
 
+/* Header Section */
 header {
-  background: #1e3a8a;
+  background-color: #111;
   color: white;
-  padding: 2rem;
   text-align: center;
+  padding: 40px 20px;
 }
 
-nav {
-  background: #111827;
-  color: white;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  color: white;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
+.brand {
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4;
+}
+
+/* Hamburger (Mobile) */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Sections */
 section {
-  padding: 2rem;
   max-width: 1000px;
-  margin: auto;
+  margin: 60px auto;
+  padding: 20px;
 }
 
-h2 {
-  color: #1e3a8a;
-  margin-bottom: 1rem;
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #111;
 }
 
+section p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Cards Grid */
 .projects, .services {
   display: grid;
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-table {
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Pricing Table */
+.pricing {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
-  border: 1px solid #ccc;
-  padding: 0.75rem;
+.pricing th,
+.pricing td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
   text-align: left;
 }
 
-th {
-  background: #f1f5f9;
+.pricing th {
+  background-color: #333;
+  color: white;
 }
 
+.pricing td {
+  background-color: #fdfdfd;
+}
+
+/* Contact Section */
 .contact {
   text-align: center;
 }
 
-.whatsapp-btn {
-  background: #25D366;
-  color: white;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
+.contact p {
+  margin-bottom: 15px;
+  font-size: 1rem;
 }
 
-footer {
-  background: #1e3a8a;
+.whatsapp-btn {
+  background-color: #25D366;
   color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebd5a;
+}
+
+/* Footer */
+footer {
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
