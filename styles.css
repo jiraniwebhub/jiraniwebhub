@@ -5,34 +5,40 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #f4f6f8;
+  color: #222;
   padding-top: 80px;
 }
 
 /* Header Section */
 header {
-  background-color: blue;
+  background-color: #0a192f;
   color: white;
   text-align: center;
   padding: 40px 20px;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   margin-bottom: 10px;
+  font-weight: 700;
 }
 
 header p {
   font-size: 1.2rem;
+  opacity: 0.9;
 }
 
 /* Navigation Bar */
 .navbar {
-  background-color: #222;
+  background-color: #112240;
   position: fixed;
   top: 0;
   width: 100%;
@@ -46,14 +52,15 @@ header p {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  color: white;
 }
 
 .brand {
   font-size: 1.5rem;
   font-weight: bold;
+  color: white;
 }
 
+/* Nav Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -61,44 +68,53 @@ header p {
 }
 
 .nav-links li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #00bcd4;
+  color: #64ffda;
 }
 
-/* Hamburger (Mobile) */
+/* Hamburger Button */
 .hamburger {
   display: none;
-  font-size: 24px;
+  font-size: 28px;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
 }
 
+/* Mobile Menu */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    z-index: 1101;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #222;
-    position: absolute;
+    background-color: #112240;
+    position: fixed;
     top: 60px;
-    right: 20px;
-    padding: 15px;
-    border-radius: 8px;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 40px 20px;
+    gap: 25px;
+    z-index: 1100;
   }
 
-  .nav-links.active {
+  .nav-links.show {
     display: flex;
   }
 
-  .hamburger {
-    display: block;
+  .nav-links li a {
+    font-size: 1.1rem;
   }
 }
 
@@ -112,102 +128,103 @@ section {
 section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color:blueviolet;
+  color: #0a192f;
 }
 
 section p {
   font-size: 1rem;
   margin-bottom: 10px;
+  color: #444;
 }
 
-/* Cards Grid */
-.projects, .services {
+/* Product Cards Grid */
+.products, .projects, .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.card {
+.product-card, .card {
   background-color: white;
   padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s;
+}
+
+.product-card:hover, .card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 15px;
 }
 
-.card h3 {
+.card h3, .product-card h3 {
   font-size: 1.3rem;
+  color: #007acc;
   margin-bottom: 10px;
-  color: blue;
 }
 
-.card p {
+.card p, .product-card p {
   font-size: 0.95rem;
   color: #555;
 }
 
-/* Pricing Table */
-.pricing {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.pricing th,
-.pricing td {
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
-  text-align: left;
-}
-
-.pricing th {
-  background-color: #333;
-  color: white;
-}
-
-.pricing td {
-  background-color: #fdfdfd;
-}
-
-/* Contact Section */
-.contact {
-  text-align: center;
-}
-
-.contact p {
-  margin-bottom: 15px;
-  font-size: 1rem;
-}
-
-.whatsapp-btn {
+/* WhatsApp Link */
+.product-card a {
+  display: inline-block;
+  margin-top: 10px;
   background-color: #25D366;
   color: white;
-  padding: 12px 25px;
-  border: none;
+  padding: 10px 15px;
   border-radius: 6px;
-  font-size: 1rem;
   text-decoration: none;
-  display: inline-block;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-.whatsapp-btn:hover {
-  background-color: #1ebd5a;
+.product-card a:hover {
+  background-color: #1ebe5d;
+}
+
+/* Location */
+#location p {
+  font-style: italic;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  background-color: #e6f2ff;
+  padding: 40px 20px;
+  border-radius: 12px;
+}
+
+.contact-section h2 {
+  color: #0a192f;
+  margin-bottom: 20px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin: 10px 0;
+  font-size: 1.1rem;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  background-color: #111;
+  background-color: #0a192f;
   color: white;
   padding: 20px;
-  font-size: 0.9rem;
-  margin-top: 40px;
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
+  font-size: 0.95rem;
+  margin-top: 60px;
 }
