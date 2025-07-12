@@ -9,14 +9,20 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #e8fbfa;
+  background: url('background.jpg');
+  background-color: #f9fefd;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #212121;
   line-height: 1.6;
   padding-top: 80px;
   animation: fadeInBody 1s ease;
 }
+
 
 /* Fade-in animation */
 @keyframes fadeInBody {
@@ -173,11 +179,12 @@ section {
   max-width: 1000px;
   margin: 60px auto;
   padding: 20px;
-  background-color: #e8fbfa;
+  background-color: #ffffff; /* changed from #e8fbfa */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
   animation: fadeInUp 1s ease;
 }
+
 
 section h2 {
   font-size: 2rem;
