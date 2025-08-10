@@ -4,315 +4,339 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<meta name="description" content="Jirani Web Hub - Affordable websites for businesses, shops, and startups in Kenya.">
+  <meta name="description" content="Jirani Web Hub - Affordable websites for businesses, shops, and startups in Kenya.">
   <meta name="keywords" content="web development, websites, e-commerce, landing pages, Nairobi, Kenya">
   <title>Jirani Web Hub</title>
-  <link rel="stylesheet" href="styles.css" />
-  <head>
-  <title>My Site</title>
-
-</head>
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
+<!-- Hero Section with Navbar -->
+<header class="hero">
+  <div class="hero-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="brand">Jirani Web Hub</div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
     <h1>Jirani Web Hub</h1>
-   
-  </header>
-
-<nav class="navbar">
-  <div class="nav-container">
-    <div class="brand">Jirani Web Hub</div>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-   
-
+    <p>Your trusted partner for affordable, professional websites in Kenya.</p>
+    <a href="#services" class="btn-primary">Explore Services</a>
+    <a href="https://wa.me/2547XXXXXXXX" target="_blank" class="btn-whatsapp">WhatsApp Us</a>
   </div>
-</nav>
+</header>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>
-    Welcome to <strong>Jirani Web Hub</strong> — your trusted partner for affordable digital and business solutions in Kenya. We help small businesses, startups, and individuals build a strong online presence and access essential services with ease. 
-  </p>
-  <p>
-    From websites to business registration and document services, we’re here to make your journey smoother — fast, friendly, and stress-free.
-  </p>
-</section>
+<!-- JavaScript for Navbar -->
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('show');
+  }
 
-</section>
+  window.addEventListener('scroll', function () {
+    document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
 
 
-   <section id="projects">
-  <h2>Projects</h2>
-  <div class="projects">
 
-    
-    <div class="card">
-      <h3>Twin Allan Stationeries</h3>
-      <p>Service-based website for a cyber café and online services. Simple and professional.</p>
-      <div class="price-badge">Ksh 1,500 – 2,200</div>
-      <a href="http://twinallan-stationeries.netlify.app" target="_blank" class="view-btn">View Site</a>
-    </div>
 
-    <div class="card">
-      <h3>Twin Allan Enterprises</h3>
-      <p>Updated version hosted on Netlify with cleaner layout and performance.</p>
-      <div class="price-badge">Ksh 2,000 – 2,800</div>
-      <a href="https://twinallan-enterprise.netlify.app" target="_blank" class="view-btn">View Site</a>
-    </div>
 
-    <div class="card">
-      <h3>Fashion Hub</h3>
-      <p>Online fashion store with product images, WhatsApp ordering, and mobile-first layout.</p>
-      <div class="price-badge">Ksh 2,500 – 3,200</div>
-      <a href="https://fashionhub254.netlify.app/" target="_blank" class="view-btn">View Site</a>
-    </div>
 
-    <div class="card">
-      <h3>SmartFix Solutions</h3>
-      <p>Repair and IT service site with WhatsApp contact form. Responsive and clean.</p>
-      <div class="price-badge">Ksh 1,800 – 2,500</div>
-      <a href="https://smart-fix.netlify.app" target="_blank" class="view-btn">View Site</a>
-    </div>
-
-    <div class="card">
-      <h3>Glow & Grace</h3>
-      <p>Salon and spa website with service showcase and WhatsApp booking system.</p>
-      <div class="price-badge">Ksh 3,000 – 4,000</div>
-      <a href="http://glowandgracee.netlify.app" target="_blank" class="view-btn">View Site</a>
-    </div>
-
-    <div class="card">
-  <h3>Edmak Branding</h3>
-  <p>Edmak is a visual branding and merchandise company offering products like apparel, drinkware, caps, banners, vehicle branding, and more — all tailored for impactful business identity.</p>
-  <div class="price-badge">Ksh 4,000 – 7,000</div>
-  <a href="http://edmak.netlify.app" target="_blank" class="view-btn">View Site</a>
-</div>
-
-   
-    <div class="card">
-  <h3>Edmak Branding</h3>
-  <p>Edmak is a visual branding and merchandise company offering products like apparel, drinkware, caps, banners, vehicle branding, and more — all tailored for impactful business identity.</p>
-  <div class="price-badge">Ksh 4,000 – 7,000</div>
-  <a href="http://edmak.netlify.app" target="_blank" class="view-btn">View Site</a>
-</div>
-  
-
-  
-
-<div class="card">
-      <h3>LuxeShop</h3>
-      <p>Modern e-commerce store built with HTML, CSS, and JavaScript. Deployed on Vercel.</p>
-      <div class="price-badge">Ksh 3,000 – 4,500</div>
-      <a href="https://luxeshop254.netlify.app/" target="_blank" class="view-btn">View Site</a>
-    </div>
-
-    <div class="card">
-      <h3>Rafiki Thrifts</h3>
-      <p>Clothing store with WhatsApp ordering. Clean layout and mobile-first design.</p>
-      <div class="price-badge">Ksh 2,500 – 3,500</div>
-      <a href="https://rafikithrifts254.netlify.app" target="_blank" class="view-btn">View Site</a>
-    </div>
-<div style="width: 100vw; overflow-x: hidden;">
-  <section id="extra-services" class="services-section">
-   <section class="more-services">
-  <h2>More Services We Offer</h2>
-  <div class="try-service-boxes">
-    <div class="service-box">
-      <h3>Google Business Setup</h3>
-      <button>Order Now</button>
-    </div>
-    <div class="service-box">
-      <h3>KRA, NHIF, NSSF Registration</h3>
-      <button>Order Now</button>
-    </div>
-    <div class="service-box">
-      <h3>WhatsApp Catalog Setup</h3>
-      <button>Order Now</button>
-    </div>
-    <div class="service-box">
-      <h3>Graphic Design & Branding</h3>
-      <button>Order Now</button>
-    </div>
-    <div class="service-box">
-      <h3>Web Hosting & Maintenance</h3>
-      <button>Order Now</button>
-    </div>
-    <div class="service-box">
-      <h3>Student Services (KUCCPS/HELB)</h3>
-      <button>Order Now</button>
-    </div>
-    <div class="service-box">
-      <h3>Digital Business Cards</h3>
-      <button>Order Now</button>
-    </div>
-    <div class="service-box">
-      <h3>Poster Design & Photo Cleanup</h3>
-      <button>Order Now</button>
+<section id="about" class="about-section">
+  <div class="about-container">
+    <h2>About Us</h2>
+    <div class="about-content">
+      <p>
+        Welcome to <strong>Jirani Web Hub</strong> — your trusted partner for affordable digital and business solutions in Kenya. 
+        We help small businesses, startups, and individuals build a strong online presence and access essential services with ease.
+      </p>
+      <p>
+        From websites to business registration and document services, we’re here to make your journey smoother — fast, friendly, and stress-free.
+      </p>
     </div>
   </div>
 </section>
 
-
-
-  </div>
 </section>
 
 
 
-  <section id="services">
-    <h2>Services</h2>
-    <div class="services">
+
+<section id="projects" class="projects-section">
+  <div class="projects-container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
 
       <div class="card">
+        <h3>Twin Allan Stationeries</h3>
+        <p>Service-based website for a cyber café and online services. Simple and professional.</p>
+        <div class="price-badge">Ksh 1,500 – 2,200</div>
+        <a href="http://twinallan-stationeries.netlify.app" target="_blank" class="view-btn">View Site</a>
+      </div>
+
+      <div class="card">
+        <h3>Twin Allan Enterprises</h3>
+        <p>Updated version hosted on Netlify with cleaner layout and performance.</p>
+        <div class="price-badge">Ksh 2,000 – 2,800</div>
+        <a href="https://twinallan-enterprise.netlify.app" target="_blank" class="view-btn">View Site</a>
+      </div>
+
+      <div class="card">
+        <h3>Fashion Hub</h3>
+        <p>Online fashion store with product images, WhatsApp ordering, and mobile-first layout.</p>
+        <div class="price-badge">Ksh 2,500 – 3,200</div>
+        <a href="https://fashionhub254.netlify.app/" target="_blank" class="view-btn">View Site</a>
+      </div>
+
+      <div class="card">
+        <h3>SmartFix Solutions</h3>
+        <p>Repair and IT service site with WhatsApp contact form. Responsive and clean.</p>
+        <div class="price-badge">Ksh 1,800 – 2,500</div>
+        <a href="https://smart-fix.netlify.app" target="_blank" class="view-btn">View Site</a>
+      </div>
+
+      <div class="card">
+        <h3>Glow & Grace</h3>
+        <p>Salon and spa website with service showcase and WhatsApp booking system.</p>
+        <div class="price-badge">Ksh 3,000 – 4,000</div>
+        <a href="http://glowandgracee.netlify.app" target="_blank" class="view-btn">View Site</a>
+      </div>
+
+      <div class="card">
+        <h3>Edmak Branding</h3>
+        <p>Visual branding and merchandise company offering apparel, drinkware, caps, banners, vehicle branding, and more.</p>
+        <div class="price-badge">Ksh 4,000 – 7,000</div>
+        <a href="http://edmak.netlify.app" target="_blank" class="view-btn">View Site</a>
+      </div>
+
+      <div class="card">
+        <h3>LuxeShop</h3>
+        <p>Modern e-commerce store built with HTML, CSS, and JavaScript. Deployed on Vercel.</p>
+        <div class="price-badge">Ksh 3,000 – 4,500</div>
+        <a href="https://luxeshop254.netlify.app/" target="_blank" class="view-btn">View Site</a>
+      </div>
+
+      <div class="card">
+        <h3>Rafiki Thrifts</h3>
+        <p>Clothing store with WhatsApp ordering. Clean layout and mobile-first design.</p>
+        <div class="price-badge">Ksh 2,500 – 3,500</div>
+        <a href="https://rafikithrifts254.netlify.app" target="_blank" class="view-btn">View Site</a>
+      </div>
+
+
+     <div class="card">
+  <h3>Fitness & Gym Website</h3>
+  <p>Professional gym website with class schedules, trainer profiles, and WhatsApp inquiries. Mobile-friendly and modern design.</p>
+  <div class="price-badge">Ksh 3,000 – 4,500</div>
+  <a href="http://ironcorefitnesss.netlify.app" target="_blank" class="view-btn">View Site</a>
+</div>
+
+
+
+<div class="card">
+  <h3>Prime Real Estate</h3>
+  <p>Modern real estate website showcasing property listings, location maps, and contact options for inquiries. Designed for both desktop and mobile users.</p>
+  <div class="price-badge">Ksh 3,000 – 4,500</div>
+  <a href="http://primerealestate.netlify.app" target="_blank" class="view-btn">View Site</a>
+</div>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="extra-services" class="services-section">
+  <div class="more-services-container">
+    <h2>More Services We Offer</h2>
+    <div class="services-grid">
+
+      <div class="service-box">
+        <h3>Google Business Setup</h3>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="service-box">
+        <h3>KRA, NHIF, NSSF Registration</h3>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="service-box">
+        <h3>WhatsApp Catalog Setup</h3>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="service-box">
+        <h3>Graphic Design & Branding</h3>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="service-box">
+        <h3>Web Hosting & Maintenance</h3>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="service-box">
+        <h3>Student Services (KUCCPS/HELB)</h3>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="service-box">
+        <h3>Digital Business Cards</h3>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="service-box">
+        <h3>Poster Design & Photo Cleanup</h3>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section id="services" class="services-section">
+  <div class="services-container">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
         <h3>Landing Pages</h3>
         <p>Perfect for cafés, barbershops, and consultants who need a simple online presence.</p>
       </div>
 
-      <div class="card">
+      <div class="service-card">
         <h3>Online Shops</h3>
         <p>Sell clothes, cosmetics, or shoes with a clean storefront and WhatsApp checkout.</p>
       </div>
 
-      <div class="card">
+      <div class="service-card">
         <h3>Service Websites</h3>
         <p>Ideal for salons, cyber cafés, and agents. Showcase your services and contact info.</p>
       </div>
 
-      <div class="card">
+      <div class="service-card">
         <h3>WhatsApp Integration</h3>
         <p>Let customers place orders or book services directly via WhatsApp.</p>
       </div>
 
     </div>
-  </section>
-
-<section id="pricing">
-  <h2>Pricing Plans For The Websites</h2>
-  <p class="pricing-note">Affordable websites for every budget — starting from Ksh 1,000</p>
-
-  <div class="pricing-cards">
-
-    <div class="pricing-card starter">
-      <h3>Starter Package</h3>
-      <p>Great for personal brands and side hustles</p>
-      <ul>
-        <li>1-page website</li>
-        <li>WhatsApp contact button</li>
-        <li>Looks great on phone and computer</li>
-        <li>Delivered in 2–3 days</li>
-      </ul>
-      <div class="price">From Ksh 1,000</div>
-      <a class="whatsapp-btn" 
-         href="https://wa.me/254799757915?text=Hi%20Jirani%20Web%20Hub%2C%20I'm%20interested%20in%20the%20Starter%20Package%20(Ksh%201%2C000).%20Please%20guide%20me%20on%20what%20you%20need%20to%20start." 
-         target="_blank">
-         Start With This Plan
-      </a>
-    </div>
-
-    <div class="pricing-card standard">
-      <h3>Business Package</h3>
-      <p>For small businesses, shops, and freelancers</p>
-      <ul>
-        <li>3–5 pages (Home, About, Services, Contact)</li>
-        <li>WhatsApp or contact form integration</li>
-        <li>Mobile responsive & hosting help</li>
-        <li>1 free revision</li>
-      </ul>
-      <div class="price">Ksh 1,800 – 2,800</div>
-      <a class="whatsapp-btn" 
-         href="https://wa.me/254799757915?text=Hi%20Jirani Web Hub%2C%20I'd%20like%20to%20get%20the%20Business%20Package%20(Ksh%201%2C800%20–%202%2C800).%20Kindly%20share%20what%20you%20need%20to%20get%20started." 
-         target="_blank">
-         Start With This Plan
-      </a>
-    </div>
-
-    <div class="pricing-card premium">
-      <h3>Shop/Pro Package</h3>
-      <p>For businesses that want to sell online</p>
-      <ul>
-        <li>Online shop or WhatsApp store setup</li>
-        <li>We upload your first 10–20 products</li>
-        <li>We set up your domain and hosting</li>
-        <li>Free website help & updates for 1 month</li>
-      </ul>
-      <div class="price">Ksh 3,000 – 4,500</div>
-      <a class="whatsapp-btn" 
-         href="https://wa.me/254799757915?text=Hello%20Jirani Web Hub%2C%20I'm%20ready%20for%20the%20Shop%2FPro%20Package%20(Ksh%203%2C000%20–%204%2C500).%20I'd%20like%20an%20online%20shop%20with%20product%20uploads%20and%20domain%20setup.%20Let's%20begin." 
-         target="_blank">
-         Start With This Plan
-      </a>
-    </div>
-
-<div class="pricing-card custom">
-  <h3>Custom Services</h3>
-  <p>We offer a wide range of support services including:</p>
-  <ul>
-    <li>Business name registration (sole proprietorships & companies)</li>
-    <li>CV writing and formatting</li>
-    <li>Online applications (KUCCPS, HELB, NTSA, KRA, eCitizen)</li>
-    <li>Business permits and licensing support</li>
-    <li>AGPO & NCA registration assistance</li>
-    <li>Renewals and compliance help</li>
-    <li>Document editing, printing & lamination</li>
-    <li>Custom one-time tech help</li>
-  </ul>
-  <div class="price">Price depends on service</div>
-  <a class="whatsapp-btn" 
-     href="https://wa.me/254799757915?text=Hi%20Jirani%20Web%20Hub%2C%20I'm%20interested%20in%20your%20custom%20services%20(e.g.%20licensing%2C%20applications%2C%20CV%2C%20NCA%2C%20KRA%20help).%20Please%20guide%20me%20on%20pricing%20and%20how%20to%20start." 
-     target="_blank">
-     Request Custom Quote
-  </a>
-</div>
-
-
-
   </div>
 </section>
 
 
 
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>Ready to build your website? Let’s talk on WhatsApp.</p>
-    <a class="whatsapp-btn" href="https://wa.me/254799757915" target="_blank">Message Me on WhatsApp</a>
-  </section>
 
-  <footer>
-    <p>&copy; 2024 Jirani Web Hub. Built by Kelvin Kariuki.</p>
-  </footer>
+<section id="pricing" class="pricing-section">
+  <div class="pricing-container">
+    <h2>Pricing Plans For Websites</h2>
+    <p class="pricing-note">Affordable websites for every budget — starting from Ksh 1,000</p>
 
-  <script>
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
+    <div class="pricing-grid">
 
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
+      <div class="pricing-card starter">
+        <h3>Starter Package</h3>
+        <p class="subtitle">Great for personal brands and side hustles</p>
+        <ul>
+          <li>1-page website</li>
+          <li>WhatsApp contact button</li>
+          <li>Mobile & desktop friendly</li>
+          <li>Delivered in 2–3 days</li>
+        </ul>
+        <div class="price">From Ksh 1,000</div>
+        <a class="whatsapp-btn" href="https://wa.me/254799757915?text=Hi%20Jirani%20Web%20Hub%2C%20I'm%20interested%20in%20the%20Starter%20Package%20(Ksh%201%2C000).%20Please%20guide%20me%20on%20what%20you%20need%20to%20start." target="_blank">
+          Start With This Plan
+        </a>
+      </div>
 
-  // Optional: close menu after clicking a link
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("show");
-    });
-  });
-</script>
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
+      <div class="pricing-card standard">
+        <h3>Business Package</h3>
+        <p class="subtitle">For small businesses, shops, and freelancers</p>
+        <ul>
+          <li>3–5 pages (Home, About, Services, Contact)</li>
+          <li>WhatsApp or contact form integration</li>
+          <li>Mobile responsive & hosting help</li>
+          <li>1 free revision</li>
+        </ul>
+        <div class="price">Ksh 1,800 – 2,800</div>
+        <a class="whatsapp-btn" href="https://wa.me/254799757915?text=Hi%20Jirani%20Web%20Hub%2C%20I'd%20like%20to%20get%20the%20Business%20Package%20(Ksh%201%2C800%20–%202%2C800).%20Kindly%20share%20what%20you%20need%20to%20get%20started." target="_blank">
+          Start With This Plan
+        </a>
+      </div>
 
-</body>
-</html>
+      <div class="pricing-card premium">
+        <h3>Shop/Pro Package</h3>
+        <p class="subtitle">For businesses that want to sell online</p>
+        <ul>
+          <li>Online shop or WhatsApp store setup</li>
+          <li>First 10–20 products uploaded</li>
+          <li>Domain & hosting setup</li>
+          <li>Free updates for 1 month</li>
+        </ul>
+        <div class="price">Ksh 3,000 – 4,500</div>
+        <a class="whatsapp-btn" href="https://wa.me/254799757915?text=Hello%20Jirani%20Web%20Hub%2C%20I'm%20ready%20for%20the%20Shop%2FPro%20Package%20(Ksh%203%2C000%20–%204%2C500).%20I'd%20like%20an%20online%20shop%20with%20product%20uploads%20and%20domain%20setup.%20Let's%20begin." target="_blank">
+          Start With This Plan
+        </a>
+      </div>
+
+      <div class="pricing-card custom">
+        <h3>Custom Services</h3>
+        <p class="subtitle">Other business & tech services we offer:</p>
+        <ul>
+          <li>Business name registration</li>
+          <li>CV writing & formatting</li>
+          <li>Online applications (KUCCPS, HELB, KRA, eCitizen)</li>
+          <li>Business permits & licensing</li>
+          <li>AGPO & NCA registration</li>
+          <li>Document printing & lamination</li>
+          <li>One-time custom tech help</li>
+        </ul>
+        <div class="price">Price depends on service</div>
+        <a class="whatsapp-btn" href="https://wa.me/254799757915?text=Hi%20Jirani%20Web%20Hub%2C%20I'm%20interested%20in%20your%20custom%20services.%20Please%20guide%20me%20on%20pricing%20and%20how%20to%20start." target="_blank">
+          Request Custom Quote
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <h2>Let’s Work Together</h2>
+    <p>Have a project in mind? Message us directly on WhatsApp and let's get started today.</p>
+    <a class="whatsapp-btn" href="https://wa.me/254799757915" target="_blank">
+      💬 Message Me on WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2024 <strong>Jirani Web Hub</strong>. Built with ❤️ by Kelvin Kariuki.</p>
+  </div>
+</footer>
