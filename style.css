@@ -1376,3 +1376,165 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+.mpesa-box {
+  background: #e8f5e9;
+  padding: 15px;
+  border-left: 5px solid #34b233;
+  max-width: 400px;
+  border-radius: 8px;
+}
+.mpesa-box p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50px;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+}
+.whatsapp-float:hover {
+  background: #1ebe57;
+}
+
+
+
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.portfolio-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+#news {
+  padding: 20px;
+  background: #f9f9f9;
+}
+#news h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.blog-preview article {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+.blog-preview a {
+  color: #007bff;
+  text-decoration: none;
+}
+.blog-preview a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Arrow button bounce */
+.blog-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ff6f00;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+
+
+.blog-button:hover {
+  background: #e65c00;
+}
+
+
+
+
+
+  
+
+
+.blog-button {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.blog-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+/* Payments Section */
+#payments {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#payments h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#payments p {
+  color: #555;
+}
+
+.mpesa-box {
+  display: inline-block;
+  border: 2px dashed #25d366; /* subtle M-Pesa green border */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  background: white; /* no heavy background color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mpesa-box p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.mpesa-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+
+

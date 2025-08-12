@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jirani Web Hub | Blog</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Blog Page Styling */
+    .blog-header {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .blog-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .blog-post {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .blog-post:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-post img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .blog-post-content {
+      padding: 1.5rem;
+    }
+
+    .blog-post-content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #0d47a1;
+    }
+
+    .blog-post-content p {
+      font-size: 1.05rem;
+      color: #333;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+
+
+
+/* Blog Animation Styling */
+.blog-post {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.blog-post:nth-child(1) { animation-delay: 0.2s; }
+.blog-post:nth-child(2) { animation-delay: 0.4s; }
+.blog-post:nth-child(3) { animation-delay: 0.6s; }
+.blog-post:nth-child(4) { animation-delay: 0.8s; }
+.blog-post:nth-child(5) { animation-delay: 1s; }
+.blog-post:nth-child(6) { animation-delay: 1.2s; }
+.blog-post:nth-child(7) { animation-delay: 1.4s; }
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.blog-post:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Smooth hover for images */
+.blog-post img {
+  transition: transform 0.4s ease;
+}
+
+.blog-post:hover img {
+  transform: scale(1.05);
+}
+
+
+
+
+/* Animation keyframes */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Blog card animation on load */
+.blog-preview article {
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+  animation-delay: calc(var(--i) * 0.2s); /* staggered load */
+}
+
+/* Hover effect for blog cards */
+.blog-preview article:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Arrow button bounce */
+.blog-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ff6f00;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.blog-button:hover {
+  background: #e65c00;
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <header class="blog-header">
+    <h1>Jirani Web Hub Blog</h1>
+    <p>Insights, Tips, and Trends in Digital Solutions</p>
+  </header>
+
+  <main class="blog-container">
+    <div class="blog-post">
+      <img src="images/blog1.jpg" alt="Small Business Tools">
+      <div class="blog-post-content">
+        <h2>Boosting Small Businesses with Digital Tools</h2>
+        <p>Digital tools have transformed how small businesses in Kenya operate. From affordable websites to social media marketing, SMEs can now reach thousands of customers without spending millions. Using tools like WhatsApp Business, Google My Business, and targeted Facebook ads, even the smallest shop in a rural town can compete with larger players.</p>
+        <p>One of the biggest opportunities is using M-Pesa integration on websites to enable direct customer payments. Additionally, customer relationship management (CRM) software can help track sales, follow up with clients, and increase repeat business. If you’re a small business owner, the time to go digital is now — before your competitors take the lead.</p>
+      </div>
+    </div>
+
+    <div class="blog-post">
+      <img src="images/blog2.jpg" alt="Online Presence">
+      <div class="blog-post-content">
+        <h2>Why Every Business Needs an Online Presence</h2>
+        <p>In 2025, having an online presence isn’t just a luxury — it’s essential. Your website and social media pages act as your 24/7 salesperson, constantly representing your brand to potential customers. Whether you run a bakery in Nairobi, a hardware store in Kisumu, or a boda boda delivery service in Mombasa, being visible online ensures you don’t miss out on opportunities.</p>
+        <p>A strong online presence builds trust. Customers are more likely to choose a business they can research and engage with online. It also allows you to receive feedback, run promotions, and adapt to customer needs quickly. If your business is not online yet, you’re invisible to a huge percentage of potential clients.</p>
+      </div>
+    </div>
+
+    <div class="blog-post">
+      <img src="images/blog3.jpg" alt="M-Pesa Integration">
+      <div class="blog-post-content">
+        <h2>How M-Pesa Integration Can Boost Your Sales</h2>
+        <p>M-Pesa is more than just a mobile money service — it’s a business growth engine. Integrating M-Pesa on your website allows customers to pay instantly, increasing trust and convenience. For example, an online store can enable “Pay Now” buttons linked directly to a till or paybill number, speeding up transactions and reducing drop-offs.</p>
+        <p>For service providers, M-Pesa integration also means you can request payments in real time and receive instant confirmation. This improves cash flow and makes customers more willing to commit to purchases or bookings.</p>
+      </div>
+    </div>
+
+    <div class="blog-post">
+      <img src="images/blog4.jpg" alt="Local SEO">
+      <div class="blog-post-content">
+        <h2>Why Local SEO Matters for Kenyan Businesses</h2>
+        <p>Local SEO ensures that people searching for products or services in your area find your business first. This is especially important for restaurants, shops, salons, and service providers. Optimizing your Google My Business profile, adding local keywords to your website, and encouraging customer reviews can significantly increase your visibility.</p>
+        <p>In Kenya, where mobile searches dominate, being at the top of local search results can mean the difference between getting 5 customers a day and getting 50.</p>
+      </div>
+    </div>
+
+    <div class="blog-post">
+      <img src="images/blog5.jpg" alt="Social Media Marketing">
+      <div class="blog-post-content">
+        <h2>Mastering Social Media Marketing</h2>
+        <p>Social media is a cost-effective way to connect with your customers, promote products, and grow brand loyalty. Platforms like Facebook, Instagram, and TikTok allow for creative campaigns that resonate with local culture and trends.</p>
+        <p>The secret is consistency and engagement — reply to comments, share customer stories, and post valuable content regularly. Paid ads can also be targeted to specific regions, age groups, and interests to maximize results.</p>
+      </div>
+    </div>
+
+    <div class="blog-post">
+      <img src="images/blog6.jpg" alt="E-commerce Growth">
+      <div class="blog-post-content">
+        <h2>The Rise of E-commerce in Kenya</h2>
+        <p>Kenya’s e-commerce sector is growing at an unprecedented rate, driven by increased internet access, improved delivery services, and trusted payment systems like M-Pesa. More Kenyans are shopping online for everything from groceries to electronics.</p>
+        <p>For entrepreneurs, this means there’s never been a better time to start an online store. With platforms like Jirani Web Hub, you can have a professional e-commerce site up and running in days — not months.</p>
+      </div>
+    </div>
+
+    <div class="blog-post">
+      <img src="images/blog7.jpg" alt="Customer Service">
+      <div class="blog-post-content">
+        <h2>How Great Customer Service Wins Loyalty</h2>
+        <p>In a competitive market, excellent customer service is your secret weapon. Responding quickly to inquiries, resolving issues professionally, and adding personal touches can make customers choose you over competitors — even if your prices are higher.</p>
+        <p>Digital tools like chatbots, WhatsApp Business, and email automation can help maintain high service levels even when you’re busy.</p>
+      </div>
+      
+    </div>
+  </main>
+
+
+
+
+<!-- Back Home Button -->
+<a href="index.html" class="back-home-btn">← Back to Home</a>
+
+<style>
+.back-home-btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff6b6b, #f06595);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.back-home-btn:hover {
+  background: linear-gradient(45deg, #f06595, #ff6b6b);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+</style>
+
+
+
+
+
+</body>
+</html>
+
