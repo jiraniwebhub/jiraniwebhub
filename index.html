@@ -2,25 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <meta name="description" content="Jirani Web Hub - Affordable websites for businesses, shops, and startups in Kenya.">
-  <meta name="keywords" content="web development, websites, e-commerce, landing pages, Nairobi, Kenya">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jirani Web Hub</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- Hero Section with Navbar -->
-<header class="hero">
-  <div class="hero-overlay"></div>
 
-  <!-- Navigation -->
+  <header>
   <nav class="navbar">
     <div class="nav-container">
       <div class="brand">Jirani Web Hub</div>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-      <ul class="nav-links" id="navLinks">
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        ☰
+      </button>
+      <ul id="navLinks" class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#services">Services</a></li>
@@ -29,26 +25,32 @@
       </ul>
     </div>
   </nav>
-
-  <!-- Hero Content -->
-  <div class="hero-content">
-    <h1>Jirani Web Hub</h1>
-    <p>Your trusted partner for affordable, professional websites in Kenya.</p>
-    <a href="#services" class="btn-primary">Explore Services</a>
-    <a href="https://wa.me/2547XXXXXXXX" target="_blank" class="btn-whatsapp">WhatsApp Us</a>
-  </div>
 </header>
 
-<!-- JavaScript for Navbar -->
-<script>
-  function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('show');
-  }
 
-  window.addEventListener('scroll', function () {
-    document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
-  });
-</script>
+
+
+
+
+
+
+
+
+
+
+
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="jirani">Build Your Dream Website with Jirani Web Hub</h1>
+    <p>Your affordable, reliable digital partner for businesses and startups in Kenya.</p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-primary">View Our Work</a>
+<a href="#" class="jwh-cta">Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+
 
 
 
@@ -57,7 +59,7 @@
 
 <section id="about" class="about-section">
   <div class="about-container">
-    <h2>About Us</h2>
+    <h2 class="section-title">About Us</h2>
     <div class="about-content">
       <p>
         Welcome to <strong>Jirani Web Hub</strong> — your trusted partner for affordable digital and business solutions in Kenya. 
@@ -70,14 +72,12 @@
   </div>
 </section>
 
-</section>
-
 
 
 
 <section id="projects" class="projects-section">
   <div class="projects-container">
-    <h2>Projects</h2>
+    <h2 class="section-title">Projects</h2>
     <div class="projects-grid">
 
       <div class="card">
@@ -136,24 +136,19 @@
         <a href="https://rafikithrifts254.netlify.app" target="_blank" class="view-btn">View Site</a>
       </div>
 
+      <div class="card">
+        <h3>Fitness & Gym Website</h3>
+        <p>Professional gym website with class schedules, trainer profiles, and WhatsApp inquiries. Mobile-friendly and modern design.</p>
+        <div class="price-badge">Ksh 3,000 – 4,500</div>
+        <a href="http://ironcorefitnesss.netlify.app" target="_blank" class="view-btn">View Site</a>
+      </div>
 
-     <div class="card">
-  <h3>Fitness & Gym Website</h3>
-  <p>Professional gym website with class schedules, trainer profiles, and WhatsApp inquiries. Mobile-friendly and modern design.</p>
-  <div class="price-badge">Ksh 3,000 – 4,500</div>
-  <a href="http://ironcorefitnesss.netlify.app" target="_blank" class="view-btn">View Site</a>
-</div>
-
-
-
-<div class="card">
-  <h3>Prime Real Estate</h3>
-  <p>Modern real estate website showcasing property listings, location maps, and contact options for inquiries. Designed for both desktop and mobile users.</p>
-  <div class="price-badge">Ksh 3,000 – 4,500</div>
-  <a href="http://primerealestate.netlify.app" target="_blank" class="view-btn">View Site</a>
-</div>
-
-
+      <div class="card">
+        <h3>Prime Real Estate</h3>
+        <p>Modern real estate website showcasing property listings, location maps, and contact options for inquiries. Designed for both desktop and mobile users.</p>
+        <div class="price-badge">Ksh 3,000 – 4,500</div>
+        <a href="http://primerealestate.netlify.app" target="_blank" class="view-btn">View Site</a>
+      </div>
 
     </div>
   </div>
@@ -161,9 +156,44 @@
 
 
 
+
+<section id="services" class="services-section">
+  <div class="services-container">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>Landing Pages</h3>
+        <p>Perfect for cafés, barbershops, and consultants who need a simple online presence.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Online Shops</h3>
+        <p>Sell clothes, cosmetics, or shoes with a clean storefront and WhatsApp checkout.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Service Websites</h3>
+        <p>Ideal for salons, cyber cafés, and agents. Showcase your services and contact info.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>WhatsApp Integration</h3>
+        <p>Let customers place orders or book services directly via WhatsApp.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 <section id="extra-services" class="services-section">
   <div class="more-services-container">
-    <h2>More Services We Offer</h2>
+    <h2 class="section-title">More Services We Offer</h2>
     <div class="services-grid">
 
       <div class="service-box">
@@ -213,43 +243,9 @@
 
 
 
-
-
-<section id="services" class="services-section">
-  <div class="services-container">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-
-      <div class="service-card">
-        <h3>Landing Pages</h3>
-        <p>Perfect for cafés, barbershops, and consultants who need a simple online presence.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Online Shops</h3>
-        <p>Sell clothes, cosmetics, or shoes with a clean storefront and WhatsApp checkout.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Service Websites</h3>
-        <p>Ideal for salons, cyber cafés, and agents. Showcase your services and contact info.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>WhatsApp Integration</h3>
-        <p>Let customers place orders or book services directly via WhatsApp.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
 <section id="pricing" class="pricing-section">
   <div class="pricing-container">
-    <h2>Pricing Plans For Websites</h2>
+    <h2 class="section-title">Pricing Plans For Websites</h2>
     <p class="pricing-note">Affordable websites for every budget — starting from Ksh 1,000</p>
 
     <div class="pricing-grid">
@@ -264,7 +260,7 @@
           <li>Delivered in 2–3 days</li>
         </ul>
         <div class="price">From Ksh 1,000</div>
-        <a class="whatsapp-btn" href="https://wa.me/254799757915?text=Hi%20Jirani%20Web%20Hub%2C%20I'm%20interested%20in%20the%20Starter%20Package%20(Ksh%201%2C000).%20Please%20guide%20me%20on%20what%20you%20need%20to%20start." target="_blank">
+        <a class="whatsapp-btn" href="https://wa.me/254799757915?text=Hi%20Jirani%20Web%20Hub%2C%20I'm%20interested%20in%20the%20Starter%20Package%20(Ksh%201%2C000).%20Please%20guide%20me%20on%20what%20you%20need%20to%20start." target="_blank" rel="noopener noreferrer">
           Start With This Plan
         </a>
       </div>
@@ -279,7 +275,7 @@
           <li>1 free revision</li>
         </ul>
         <div class="price">Ksh 1,800 – 2,800</div>
-        <a class="whatsapp-btn" href="https://wa.me/254799757915?text=Hi%20Jirani%20Web%20Hub%2C%20I'd%20like%20to%20get%20the%20Business%20Package%20(Ksh%201%2C800%20–%202%2C800).%20Kindly%20share%20what%20you%20need%20to%20get%20started." target="_blank">
+        <a class="whatsapp-btn" href="https://wa.me/254799757915?text=Hi%20Jirani%20Web%20Hub%2C%20I'd%20like%20to%20get%20the%20Business%20Package%20(Ksh%201%2C800%20–%202%2C800).%20Kindly%20share%20what%20you%20need%20to%20get%20started." target="_blank" rel="noopener noreferrer">
           Start With This Plan
         </a>
       </div>
@@ -294,7 +290,7 @@
           <li>Free updates for 1 month</li>
         </ul>
         <div class="price">Ksh 3,000 – 4,500</div>
-        <a class="whatsapp-btn" href="https://wa.me/254799757915?text=Hello%20Jirani%20Web%20Hub%2C%20I'm%20ready%20for%20the%20Shop%2FPro%20Package%20(Ksh%203%2C000%20–%204%2C500).%20I'd%20like%20an%20online%20shop%20with%20product%20uploads%20and%20domain%20setup.%20Let's%20begin." target="_blank">
+        <a class="whatsapp-btn" href="https://wa.me/254799757915?text=Hello%20Jirani%20Web%20Hub%2C%20I'm%20ready%20for%20the%20Shop%2FPro%20Package%20(Ksh%203%2C000%20–%204%2C500).%20I'd%20like%20an%20online%20shop%20with%20product%20uploads%20and%20domain%20setup.%20Let's%20begin." target="_blank" rel="noopener noreferrer">
           Start With This Plan
         </a>
       </div>
@@ -312,7 +308,7 @@
           <li>One-time custom tech help</li>
         </ul>
         <div class="price">Price depends on service</div>
-        <a class="whatsapp-btn" href="https://wa.me/254799757915?text=Hi%20Jirani%20Web%20Hub%2C%20I'm%20interested%20in%20your%20custom%20services.%20Please%20guide%20me%20on%20pricing%20and%20how%20to%20start." target="_blank">
+        <a class="whatsapp-btn" href="https://wa.me/254799757915?text=Hi%20Jirani%20Web%20Hub%2C%20I'm%20interested%20in%20your%20custom%20services.%20Please%20guide%20me%20on%20pricing%20and%20how%20to%20start." target="_blank" rel="noopener noreferrer">
           Request Custom Quote
         </a>
       </div>
@@ -323,20 +319,214 @@
 
 
 
-
-
 <section id="contact" class="contact-section">
   <div class="contact-container">
-    <h2>Let’s Work Together</h2>
-    <p>Have a project in mind? Message us directly on WhatsApp and let's get started today.</p>
-    <a class="whatsapp-btn" href="https://wa.me/254799757915" target="_blank">
+    <h2 class="section-title">Let’s Work Together</h2>
+    <p class="contact-text">Have a project in mind? Message us directly on WhatsApp and let's get started today.</p>
+    <a class="whatsapp-btn" href="https://wa.me/254799757915" target="_blank" rel="noopener noreferrer" aria-label="Message Jirani Web Hub on WhatsApp">
       💬 Message Me on WhatsApp
     </a>
   </div>
 </section>
+
+
+
+<script>
+// Smooth scroll for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<!-- Get a Quote Button -->
+
+
+<!-- Quote Modal -->
+<div id="quoteModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="quoteModalTitle">
+  <div class="modal-content">
+    <button class="modal-close" id="closeQuoteModal" aria-label="Close quote form">&times;</button>
+    <h2 id="quoteModalTitle">Request a Quote</h2>
+
+    <form id="quoteForm">
+      <label for="name">Your Name *</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9+ ]{9,15}" placeholder="+254..." required />
+
+      <label for="businessName">Business Name *</label>
+      <input type="text" id="businessName" name="businessName" required />
+
+      <label for="businessType">Type of Website *</label>
+      <select id="businessType" name="businessType" required>
+        <option value="" disabled selected>Select type</option>
+        <option value="Landing Page">Landing Page</option>
+        <option value="Online Shop">Online Shop</option>
+        <option value="Service Website">Service Website</option>
+        <option value="Custom">Custom</option>
+      </select>
+
+      <label for="businessSize">Size of Business *</label>
+      <select id="businessSize" name="businessSize" required>
+        <option value="" disabled selected>Select size</option>
+        <option value="Small">Small (1-5 employees)</option>
+        <option value="Medium">Medium (6-20 employees)</option>
+        <option value="Large">Large (20+ employees)</option>
+      </select>
+
+      <label for="otherDetails">Other Details</label>
+      <textarea id="otherDetails" name="otherDetails" rows="3" placeholder="Any special requests or info..."></textarea>
+
+      <button type="submit" class="btn-primary">Calculate Quote</button>
+    </form>
+
+    <div id="quoteResult">
+      <h3>Your Estimated Quote: <span id="quoteAmount"></span></h3>
+      <button id="sendWhatsApp" class="btn-secondary">Send Details on WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Elements
+  const modal = document.getElementById('quoteModal');
+  const closeBtn = document.getElementById('closeQuoteModal');
+  const quoteForm = document.getElementById('quoteForm');
+  const quoteResult = document.getElementById('quoteResult');
+  const quoteAmount = document.getElementById('quoteAmount');
+  const sendWhatsAppBtn = document.getElementById('sendWhatsApp');
+
+  // Open modal on "Get a Quote" click
+  document.querySelector('.jwh-cta').addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+    quoteForm.style.display = 'block';
+    quoteResult.style.display = 'none';
+    quoteForm.reset();
+  });
+
+  // Close modal on close button click
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+  });
+
+  // Close modal when clicking outside modal content
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  // Quote calculation logic
+  function calculateQuote(type, size) {
+    let basePrice = 0;
+    switch(type) {
+      case 'Landing Page': basePrice = 1000; break;
+      case 'Online Shop': basePrice = 3000; break;
+      case 'Service Website': basePrice = 2800; break;
+      case 'Custom': basePrice = 2500; break;
+      default: basePrice = 1000;
+    }
+    switch(size) {
+      case 'Small': basePrice *= 1; break;
+      case 'Medium': basePrice *= 1.3; break;
+      case 'Large': basePrice *= 1.6; break;
+      default: basePrice *= 1;
+    }
+    return Math.round(basePrice);
+  }
+
+  // On form submit
+  quoteForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(quoteForm);
+    const name = formData.get('name').trim();
+    const email = formData.get('email').trim();
+    const phone = formData.get('phone').trim();
+    const businessName = formData.get('businessName').trim();
+    const businessType = formData.get('businessType');
+    const businessSize = formData.get('businessSize');
+    const otherDetails = formData.get('otherDetails').trim() || 'None';
+
+    // Calculate quote
+    const price = calculateQuote(businessType, businessSize);
+
+    // Show quote result
+    quoteAmount.textContent = `Ksh ${price.toLocaleString()}`;
+    quoteForm.style.display = 'none';
+    quoteResult.style.display = 'block';
+
+    // Prepare WhatsApp message
+    const messageLines = [
+      `Hello Jirani Web Hub,`,
+      `I am interested in a website quote.`,
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Phone: ${phone}`,
+      `Business Name: ${businessName}`,
+      `Website Type: ${businessType}`,
+      `Business Size: ${businessSize}`,
+      `Other Details: ${otherDetails}`,
+      `Estimated Quote: Ksh ${price.toLocaleString()}`
+    ];
+    const encodedMessage = encodeURIComponent(messageLines.join('\n'));
+
+    // Clear old click handlers
+    sendWhatsAppBtn.onclick = null;
+
+    // Add new click handler to WhatsApp button
+    sendWhatsAppBtn.addEventListener('click', () => {
+      window.open(`https://wa.me/254799757915?text=${encodedMessage}`, '_blank');
+    });
+  });
+</script>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    hamburger.setAttribute(
+      'aria-expanded',
+      hamburger.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+    );
+  });
+});
+</script>
+
+
+
+
+
+
+
+</script>
+
+
 
 <footer class="site-footer">
   <div class="footer-container">
     <p>&copy; 2024 <strong>Jirani Web Hub</strong>. Built with ❤️ by Kelvin Kariuki.</p>
   </div>
 </footer>
+
+
+</body>
+</html>
