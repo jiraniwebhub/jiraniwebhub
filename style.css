@@ -1536,5 +1536,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+
+.hero {
+  background: linear-gradient(to right, #007BFF, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+}
+.hero .btn {
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.hero .btn:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
 
 

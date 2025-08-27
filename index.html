@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jirani Web Hub</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+  <meta name="description" content="Jirani Web Hub - Affordable websites, branding, hosting, and business services in Kenya.">
+<meta property="og:title" content="Jirani Web Hub">
+<meta property="og:description" content="We design affordable, modern websites and digital solutions for small businesses in Kenya.">
+<meta property="og:image" content="your-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+
 </head>
 <body>
 
@@ -22,24 +31,13 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="blog.html">Blog</a></li>
+        <li><a href="questions.html">FAQ</a></li> 
 
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 </header>
-
-
-
-
-
-
-
-
-
-
-
-
 
 <section class="hero">
   <div class="hero-content">
@@ -51,12 +49,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-
 
 
 <section id="about" class="about-section">
@@ -187,9 +179,6 @@
     </div>
   </div>
 </section>
-
-
-
 
 
 
@@ -327,13 +316,30 @@
   <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px;">
     <div style="width:300px; padding:20px; background:white; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
       <p>"Jirani Web Hub transformed our online presence. Highly recommended!"</p>
-      <strong>- Jane Doe</strong>
+      <strong>- Jane Mueni</strong>
     </div>
     <div style="width:300px; padding:20px; background:white; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
       <p>"Professional, fast, and creative. Best team we've worked with."</p>
-      <strong>- John Smith</strong>
+      <strong>- John Wambua</strong>
     </div>
   </div>
+</section>
+
+<section id="news-link" style="text-align: center; padding: 50px 0; background-color: #f9f9f9;">
+
+<a href="questions.html" 
+     style="
+       display: inline-block;
+       padding: 12px 25px;
+       background-color: #007BFF;
+       color: #fff;
+       font-size: 16px;
+       border-radius: 5px;
+       text-decoration: none;
+       transition: background 0.3s ease;">
+    
+      FAQ→
+  </a>
 </section>
 
 
@@ -364,10 +370,6 @@
 </section>
 
 
-
-
-
-
 <section id="payments" class="section">
   <h2>Pay via M-Pesa</h2>
   <p>Pay for your services quickly and securely using M-Pesa:</p>
@@ -378,9 +380,6 @@
     <p><strong>Account:</strong>Kelvin Kariuki Mwangi</p>
   </div>
 </section>
-
-
-
 
 
 <section id="news-link" style="text-align: center; padding: 50px 0; background-color: #f9f9f9;">
@@ -405,12 +404,6 @@
     background-color: #0056b3;
   }
 </style>
-
-
-
-
-
-
 
 
 <section id="contact" class="contact-section">
@@ -607,24 +600,58 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 
-
-
-
-
-
 </script>
 
 
-
-<!-- Newsletter Signup -->
 <section id="newsletter" style="padding:40px 20px; background:#f1f1f1; text-align:center;">
   <h2>Subscribe to Our Newsletter</h2>
-  <form style="margin-top:15px;">
-    <input type="email" placeholder="Enter your email" required style="padding:10px; width:250px; border-radius:5px; border:1px solid #ccc;">
-    <button type="submit" style="padding:10px 20px; background:#007BFF; color:white; border:none; border-radius:5px;">Subscribe</button>
+  <form id="newsletter-form" style="margin-top:15px;" novalidate>
+    <input
+      type="email"
+      id="newsletter-email"
+      name="email"
+      placeholder="Enter your email"
+      required
+      style="padding:10px; width:250px; border-radius:5px; border:1px solid #ccc;"
+    />
+    <button type="submit"
+      style="padding:10px 20px; background:#007BFF; color:white; border:none; border-radius:5px;">
+      Subscribe
+    </button>
   </form>
+  <p id="newsletter-message" style="margin-top:10px; font-size:14px;" hidden></p>
 </section>
 
+<script defer>
+(function () {
+  const form = document.getElementById('newsletter-form');
+  if (!form) return;
+
+  const emailInput = document.getElementById('newsletter-email');
+  const message = document.getElementById('newsletter-message');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+
+    // simple validation
+    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!isValid) {
+      message.hidden = false;
+      message.style.color = '#c62828';
+      message.textContent = '⚠️ Please enter a valid email address.';
+      emailInput.focus();
+      return;
+    }
+
+    // success UI
+    message.hidden = false;
+    message.style.color = '#2e7d32';
+    message.textContent = `🎉 Thank you! You’ve subscribed with ${email}`;
+    form.reset();
+  });
+})();
+</script>
 
 
 

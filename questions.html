@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQs - Jirani Web Hub</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: #f8fafc;
+      color: #2d3436;
+      line-height: 1.7;
+    }
+
+    /* Header */
+    header {
+      background: #0d253f;
+      color: #fff;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00b894;
+    }
+
+    /* Special Home Button */
+    .home-btn {
+      background: #00b894;
+      color: #fff !important;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .home-btn:hover {
+      background: #019874;
+      transform: scale(1.05);
+    }
+
+    /* Hamburger */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 26px;
+      height: 3px;
+      background: #fff;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+      max-width: 850px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .faq-container h2 {
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 2rem;
+      color: #0d253f;
+      font-weight: 700;
+    }
+
+    .faq {
+      margin-bottom: 18px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s;
+    }
+
+    .faq:hover {
+      transform: translateY(-2px);
+    }
+
+    .faq button {
+      width: 100%;
+      padding: 18px 20px;
+      background: #fff;
+      border: none;
+      text-align: left;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #0d253f;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq button:hover {
+      background: #f1f3f5;
+    }
+
+    .faq p {
+      display: none;
+      padding: 15px 20px;
+      background: #fafafa;
+      font-size: 0.95rem;
+      color: #444;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .faq button::after {
+      content: "+";
+      font-size: 1.4rem;
+      transition: transform 0.3s;
+      color: #0d253f;
+    }
+
+    .faq.active button::after {
+      content: "-";
+      transform: rotate(180deg);
+      color: #00b894;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #112b46;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 220px;
+        padding: 15px;
+        border-radius: 6px;
+      }
+
+      nav a {
+        padding: 12px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>FAQs</h1>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav id="nav-links">
+      <a href="index.html" class="home-btn">Home</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <!-- FAQ Section -->
+  <section class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <button>What services does Jirani Web Hub offer?</button>
+      <p>We provide professional web design, e-commerce solutions, branding, and tech consultancy to help your business grow online.</p>
+    </div>
+
+    <div class="faq">
+      <button>How long does it take to build a website?</button>
+      <p>Project timelines vary, but most sites are delivered within 1–2 weeks depending on complexity and client requirements.</p>
+    </div>
+
+    <div class="faq">
+      <button>Do you provide ongoing support?</button>
+      <p>Yes, we offer maintenance packages to keep your website updated, secure, and running smoothly long-term.</p>
+    </div>
+
+    <div class="faq">
+      <button>Can I request a custom design?</button>
+      <p>Absolutely! Every project is tailored to reflect your unique brand identity and business goals.</p>
+    </div>
+  </section>
+
+
+  <!-- Home Button -->
+  <div class="home-button-container">
+    <a href="index.html" class="home-button">Home</a>
+  </div>
+
+  <style>
+    .home-button-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .home-button {
+      display: inline-block;
+      background: #00b894;
+      color: #fff;
+      padding: 12px 28px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.25s ease, background 0.3s ease, box-shadow 0.25s ease;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .home-button:hover {
+      background: #019874;
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    .home-button:active {
+      transform: scale(0.97);
+    }
+
+    /* Simple entry animation */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+
+
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll(".faq button").forEach(button => {
+      button.addEventListener("click", () => {
+        const faq = button.parentElement;
+        const open = faq.classList.contains("active");
+
+        // Close all
+        document.querySelectorAll(".faq").forEach(f => {
+          f.classList.remove("active");
+          f.querySelector("p").style.display = "none";
+        });
+
+        // Toggle current
+        if (!open) {
+          faq.classList.add("active");
+          faq.querySelector("p").style.display = "block";
+        }
+      });
+    });
+
+    // Hamburger toggle
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav-links");
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>
