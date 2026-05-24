@@ -487,15 +487,10 @@ section {
 }
 
 .footer-location {
-  color: var(--muted);
+  color: rgba(203, 213, 225, 0.9);
   font-size: 0.95rem;
 }
 
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
@@ -520,23 +515,9 @@ section {
 @media (max-width: 1120px) {
   .hero,
   .projects-grid {
-  color: rgba(203, 213, 225, 0.95);
+    grid-template-columns: 1fr;
   }
 
-
-@media (max-width: 680px) {
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .footer-nav {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 12px;
-  }
-}
   .featured-project {
     grid-column: auto;
   }
@@ -575,7 +556,12 @@ section {
   }
 
   .hero {
+    grid-template-columns: 1fr;
     gap: 28px;
+  }
+
+  .hero-panel {
+    justify-items: start;
   }
 
   .services-grid,
@@ -593,28 +579,53 @@ section {
 
 @media (max-width: 680px) {
   section {
-    padding: 72px 20px;
+    padding: 60px 18px;
+  }
+
+  .hero {
+    padding-top: 80px;
   }
 
   .hero-content h1,
   .section-header h2,
   .contact-panel h2 {
-    font-size: 2.4rem;
+    font-size: 2.25rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
   }
 
   .hero-cards {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .hero-cards article {
+    padding: 20px;
   }
 
   .panel-badges {
     grid-template-columns: 1fr;
   }
 
+  .project-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
   .service-card,
   .feature-card,
   .project-card,
   .testimonial-card,
-  .stats-grid article {
+  .stats-grid article,
+  .contact-panel {
     padding: 28px;
   }
 
