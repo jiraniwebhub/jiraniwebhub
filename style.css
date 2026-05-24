@@ -526,6 +526,24 @@ section {
 @media (max-width: 920px) {
   .header-inner {
     padding: 18px 22px;
+    position: relative;
+    justify-content: flex-end;
+  }
+
+  .header-inner .brand {
+    order: 1;
+    margin-right: auto;
+  }
+
+  .header-inner .btn-primary {
+    order: 2;
+    margin-left: 0;
+  }
+
+  .header-inner .nav-toggle {
+    display: flex;
+    order: 3;
+    margin-left: 16px;
   }
 
   .main-nav {
@@ -549,10 +567,6 @@ section {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
-  }
-
-  .nav-toggle {
-    display: flex;
   }
 
   .hero {
