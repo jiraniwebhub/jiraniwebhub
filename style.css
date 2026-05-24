@@ -35,6 +35,28 @@ body {
   overflow-x: hidden;
 }
 
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: #07121b;
+  color: #f8fafc;
+  border-radius: 8px;
+  z-index: 9999;
+}
+
 button,
 input,
 select,
@@ -711,6 +733,6 @@ section {
     line-height: 1.08;
   }
   }
-}
+
 
 
