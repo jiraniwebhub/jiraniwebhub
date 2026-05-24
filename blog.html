@@ -1,177 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jirani Web Hub | Blog</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* Blog Page Styling */
+    /* --- General Reset & Typography --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    /* --- Header --- */
     .blog-header {
-      background: #0d47a1;
+      background: #008080; /* New teal color */
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
+      position: relative;
     }
 
     .blog-header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 0.5rem;
+      font-weight: 700;
     }
 
+    .blog-header p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    /* --- Blog Layout --- */
+    .blog-main {
+      display: flex;
+      max-width: 1200px;
+      margin: 2rem auto;
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+
+    /* --- Blog Posts Section --- */
     .blog-container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 2rem;
+      flex: 3;
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 2.5rem;
     }
 
     .blog-post {
       background: white;
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s forwards;
     }
 
-    .blog-post:hover {
-      transform: translateY(-5px);
+    .blog-post:nth-child(1) { animation-delay: 0.2s; }
+    .blog-post:nth-child(2) { animation-delay: 0.4s; }
+    .blog-post:nth-child(3) { animation-delay: 0.6s; }
+    .blog-post:nth-child(4) { animation-delay: 0.8s; }
+    .blog-post:nth-child(5) { animation-delay: 1s; }
+    .blog-post:nth-child(6) { animation-delay: 1.2s; }
+    .blog-post:nth-child(7) { animation-delay: 1.4s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .blog-post img {
       width: 100%;
-      height: 300px;
+      height: 280px;
       object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .blog-post:hover img {
+      transform: scale(1.05);
     }
 
     .blog-post-content {
-      padding: 1.5rem;
+      padding: 1.8rem;
     }
 
     .blog-post-content h2 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-      color: #0d47a1;
+      font-size: 1.9rem;
+      color: #008080; /* Teal header */
+      margin-bottom: 0.7rem;
+      font-weight: 600;
     }
 
     .blog-post-content p {
       font-size: 1.05rem;
-      color: #333;
       margin-bottom: 1rem;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
+    .blog-post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
 
+    /* --- Sidebar --- */
+    .sidebar {
+      flex: 1;
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      height: fit-content;
+    }
 
+    .sidebar h3 {
+      color: #008080;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
 
-/* Blog Animation Styling */
-.blog-post {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transform: translateY(20px);
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards;
-}
+    .sidebar ul {
+      list-style: none;
+    }
 
-.blog-post:nth-child(1) { animation-delay: 0.2s; }
-.blog-post:nth-child(2) { animation-delay: 0.4s; }
-.blog-post:nth-child(3) { animation-delay: 0.6s; }
-.blog-post:nth-child(4) { animation-delay: 0.8s; }
-.blog-post:nth-child(5) { animation-delay: 1s; }
-.blog-post:nth-child(6) { animation-delay: 1.2s; }
-.blog-post:nth-child(7) { animation-delay: 1.4s; }
+    .sidebar ul li {
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
 
-@keyframes fadeUp {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+    .sidebar ul li a {
+      color: #333;
+      transition: color 0.3s ease;
+    }
 
-.blog-post:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
+    .sidebar ul li a:hover {
+      color: #008080;
+    }
 
-/* Smooth hover for images */
-.blog-post img {
-  transition: transform 0.4s ease;
-}
+    /* --- Back Home Button --- */
+    .back-home-btn {
+      display: inline-block;
+      background: linear-gradient(45deg, #008080, #00b3b3);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      z-index: 100;
+    }
 
-.blog-post:hover img {
-  transform: scale(1.05);
-}
+    .back-home-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
 
-
-
-
-/* Animation keyframes */
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-8px);
-  }
-  60% {
-    transform: translateY(-4px);
-  }
-}
-
-/* Blog card animation on load */
-.blog-preview article {
-  animation: fadeUp 0.8s ease forwards;
-  opacity: 0;
-  animation-delay: calc(var(--i) * 0.2s); /* staggered load */
-}
-
-/* Hover effect for blog cards */
-.blog-preview article:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Arrow button bounce */
-.blog-button {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #ff6f00;
-  color: white;
-  font-size: 1.1rem;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-  animation: bounce 2s infinite;
-}
-
-.blog-button:hover {
-  background: #e65c00;
-}
-
-
-
-
-
+    /* --- Responsive --- */
+    @media(max-width: 1024px) {
+      .blog-main {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
@@ -181,106 +200,74 @@
     <p>Insights, Tips, and Trends in Digital Solutions</p>
   </header>
 
-  <main class="blog-container">
-    <div class="blog-post">
-      <img src="images/blog1.jpg" alt="Small Business Tools">
-      <div class="blog-post-content">
-        <h2>Boosting Small Businesses with Digital Tools</h2>
-        <p>Digital tools have transformed how small businesses in Kenya operate. From affordable websites to social media marketing, SMEs can now reach thousands of customers without spending millions. Using tools like WhatsApp Business, Google My Business, and targeted Facebook ads, even the smallest shop in a rural town can compete with larger players.</p>
-        <p>One of the biggest opportunities is using M-Pesa integration on websites to enable direct customer payments. Additionally, customer relationship management (CRM) software can help track sales, follow up with clients, and increase repeat business. If you’re a small business owner, the time to go digital is now — before your competitors take the lead.</p>
-      </div>
-    </div>
+  <main class="blog-main">
 
-    <div class="blog-post">
-      <img src="images/blog2.jpg" alt="Online Presence">
-      <div class="blog-post-content">
-        <h2>Why Every Business Needs an Online Presence</h2>
-        <p>In 2025, having an online presence isn’t just a luxury — it’s essential. Your website and social media pages act as your 24/7 salesperson, constantly representing your brand to potential customers. Whether you run a bakery in Nairobi, a hardware store in Kisumu, or a boda boda delivery service in Mombasa, being visible online ensures you don’t miss out on opportunities.</p>
-        <p>A strong online presence builds trust. Customers are more likely to choose a business they can research and engage with online. It also allows you to receive feedback, run promotions, and adapt to customer needs quickly. If your business is not online yet, you’re invisible to a huge percentage of potential clients.</p>
+    <!-- Blog Posts -->
+    <section class="blog-container">
+      <div class="blog-post">
+        <img src="images/blog1.jpg" alt="Small Business Tools">
+        <div class="blog-post-content">
+          <h2>Boosting Small Businesses with Digital Tools</h2>
+          <p>Digital tools have transformed how small businesses operate. From affordable websites to social media marketing, SMEs can now reach thousands of customers without spending millions.</p>
+          <p>Platforms like WhatsApp Business, Google My Business, and targeted ads allow even the smallest shops to compete with larger players.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="blog-post">
-      <img src="images/blog3.jpg" alt="M-Pesa Integration">
-      <div class="blog-post-content">
-        <h2>How M-Pesa Integration Can Boost Your Sales</h2>
-        <p>M-Pesa is more than just a mobile money service — it’s a business growth engine. Integrating M-Pesa on your website allows customers to pay instantly, increasing trust and convenience. For example, an online store can enable “Pay Now” buttons linked directly to a till or paybill number, speeding up transactions and reducing drop-offs.</p>
-        <p>For service providers, M-Pesa integration also means you can request payments in real time and receive instant confirmation. This improves cash flow and makes customers more willing to commit to purchases or bookings.</p>
+      <div class="blog-post">
+        <img src="images/blog2.jpg" alt="Online Presence">
+        <div class="blog-post-content">
+          <h2>Why Every Business Needs an Online Presence</h2>
+          <p>Your website and social media pages act as a 24/7 salesperson. Being visible online ensures you don’t miss out on opportunities and helps build customer trust.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="blog-post">
-      <img src="images/blog4.jpg" alt="Local SEO">
-      <div class="blog-post-content">
-        <h2>Why Local SEO Matters for Kenyan Businesses</h2>
-        <p>Local SEO ensures that people searching for products or services in your area find your business first. This is especially important for restaurants, shops, salons, and service providers. Optimizing your Google My Business profile, adding local keywords to your website, and encouraging customer reviews can significantly increase your visibility.</p>
-        <p>In Kenya, where mobile searches dominate, being at the top of local search results can mean the difference between getting 5 customers a day and getting 50.</p>
+      <div class="blog-post">
+        <img src="images/blog3.jpg" alt="M-Pesa Integration">
+        <div class="blog-post-content">
+          <h2>How M-Pesa Integration Can Boost Your Sales</h2>
+          <p>M-Pesa integration allows instant payments, increasing convenience and trust. Online stores and service providers can streamline transactions, improving cash flow and customer commitment.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="blog-post">
-      <img src="images/blog5.jpg" alt="Social Media Marketing">
-      <div class="blog-post-content">
-        <h2>Mastering Social Media Marketing</h2>
-        <p>Social media is a cost-effective way to connect with your customers, promote products, and grow brand loyalty. Platforms like Facebook, Instagram, and TikTok allow for creative campaigns that resonate with local culture and trends.</p>
-        <p>The secret is consistency and engagement — reply to comments, share customer stories, and post valuable content regularly. Paid ads can also be targeted to specific regions, age groups, and interests to maximize results.</p>
+      <div class="blog-post">
+        <img src="images/blog4.jpg" alt="Local SEO">
+        <div class="blog-post-content">
+          <h2>Why Local SEO Matters for Kenyan Businesses</h2>
+          <p>Optimizing for local search ensures your business is found first. Google My Business, local keywords, and customer reviews increase visibility and attract more customers.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="blog-post">
-      <img src="images/blog6.jpg" alt="E-commerce Growth">
-      <div class="blog-post-content">
-        <h2>The Rise of E-commerce in Kenya</h2>
-        <p>Kenya’s e-commerce sector is growing at an unprecedented rate, driven by increased internet access, improved delivery services, and trusted payment systems like M-Pesa. More Kenyans are shopping online for everything from groceries to electronics.</p>
-        <p>For entrepreneurs, this means there’s never been a better time to start an online store. With platforms like Jirani Web Hub, you can have a professional e-commerce site up and running in days — not months.</p>
+      <div class="blog-post">
+        <img src="images/blog5.jpg" alt="Social Media Marketing">
+        <div class="blog-post-content">
+          <h2>Mastering Social Media Marketing</h2>
+          <p>Social media is cost-effective for connecting with customers, promoting products, and building brand loyalty. Consistency, engagement, and targeted paid ads maximize results.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="blog-post">
-      <img src="images/blog7.jpg" alt="Customer Service">
-      <div class="blog-post-content">
-        <h2>How Great Customer Service Wins Loyalty</h2>
-        <p>In a competitive market, excellent customer service is your secret weapon. Responding quickly to inquiries, resolving issues professionally, and adding personal touches can make customers choose you over competitors — even if your prices are higher.</p>
-        <p>Digital tools like chatbots, WhatsApp Business, and email automation can help maintain high service levels even when you’re busy.</p>
+      <div class="blog-post">
+        <img src="images/blog6.jpg" alt="E-commerce Growth">
+        <div class="blog-post-content">
+          <h2>The Rise of E-commerce in Kenya</h2>
+          <p>With improved internet access, delivery services, and payment systems like M-Pesa, more Kenyans shop online, presenting huge opportunities for entrepreneurs to start e-commerce stores.</p>
+        </div>
       </div>
-      
-    </div>
+
+      <div class="blog-post">
+        <img src="images/blog7.jpg" alt="Customer Service">
+        <div class="blog-post-content">
+          <h2>How Great Customer Service Wins Loyalty</h2>
+          <p>Excellent customer service differentiates your business. Responding quickly, resolving issues, and adding personal touches can make customers choose you over competitors.</p>
+        </div>
+      </div>
+    </section>
+
+   
+
   </main>
 
-
-
-
-<!-- Back Home Button -->
-<a href="index.html" class="back-home-btn">← Back to Home</a>
-
-<style>
-.back-home-btn {
-  display: inline-block;
-  background: linear-gradient(45deg, #ff6b6b, #f06595);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.back-home-btn:hover {
-  background: linear-gradient(45deg, #f06595, #ff6b6b);
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-</style>
-
-
-
-
+  <!-- Back Home Button -->
+  <a href="index.html" class="back-home-btn">← Back to Home</a>
 
 </body>
 </html>
-
