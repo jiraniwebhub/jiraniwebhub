@@ -676,18 +676,39 @@ section {
     box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12);
   }
 
-  /* Floating consultation button on small screens */
-  .btn-primary {
-    position: fixed;
-    right: 18px;
-    bottom: 18px;
-    z-index: 80;
+  /* Header CTA stacked under the brand for a premium feel */
+  .header-cta {
+    display: inline-flex;
+    width: 100%;
+    max-width: 360px;
+    justify-content: center;
     padding: 12px 18px;
     border-radius: 999px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateZ(0);
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #fff;
+    box-shadow: 0 18px 40px rgba(37, 99, 235, 0.14);
+    margin-top: 12px;
+  }
+
+  .brand {
+    font-size: 1.35rem;
+    letter-spacing: -0.02em;
+  }
+
+  /* Softer, larger cards for a luxurious mobile layout */
+  .service-card,
+  .project-card,
+  .testimonial-card,
+  .feature-card {
+    border-radius: 20px;
+    padding: 22px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
+  }
+
+  .hero-content h1 {
+    font-size: 1.9rem;
+    line-height: 1.08;
   }
   }
 }
