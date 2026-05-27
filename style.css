@@ -350,10 +350,11 @@ section {
 
 .trust-section .trust-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
   max-width: 1160px;
   margin: 0 auto;
+  justify-items: stretch;
 }
 
 .trust-grid span {
@@ -361,7 +362,7 @@ section {
   align-items: center;
   justify-content: center;
   min-height: 72px;
-  padding: 18px 20px;
+  padding: 16px 18px;
   background: var(--surface);
   border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 22px;
@@ -369,6 +370,7 @@ section {
   font-weight: 700;
   letter-spacing: 0.01em;
   box-shadow: 0 18px 42px rgba(15, 23, 42, 0.06);
+  text-align: center;
 }
 
 .process-grid {
@@ -692,9 +694,13 @@ section {
   .why-grid,
   .testimonials-grid,
   .stats-grid,
-  .trust-grid,
   .process-grid {
     grid-template-columns: 1fr;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
   }
 
   .contact-panel {
@@ -742,15 +748,19 @@ section {
     grid-template-columns: 1fr;
   }
 
-  .trust-grid,
-  .process-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+  .trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
   }
 
   .trust-grid span {
-    min-height: 64px;
-    padding: 16px 12px;
+    min-height: 60px;
+    padding: 14px 14px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .process-grid article {
@@ -888,6 +898,11 @@ section {
   .project-tags span {
     padding: 8px 12px;
     font-size: 0.8rem;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .trust-grid span,
