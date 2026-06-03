@@ -103,9 +103,9 @@ img {
 }
 
 .brand {
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: -0.04em;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 h1,
@@ -114,7 +114,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 strong,
@@ -187,17 +188,19 @@ b {
 }
 
 .btn-primary {
-  padding: 16px 30px;
+  padding: 14px 28px;
   background: linear-gradient(135deg, #1d4ed8, #1e40af);
   color: #ffffff;
   box-shadow: 0 20px 44px rgba(30, 64, 175, 0.18);
+  font-size: 0.95rem;
 }
 
 .btn-secondary {
-  padding: 16px 30px;
+  padding: 14px 28px;
   border: 1px solid rgba(37, 99, 235, 0.14);
   background: rgba(37, 99, 235, 0.06);
   color: #0f172a;
+  font-size: 0.95rem;
 }
 
 .btn:hover {
@@ -224,18 +227,19 @@ section {
 .section-header span,
 .eyebrow {
   display: inline-block;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   color: var(--primary);
   text-transform: uppercase;
-  letter-spacing: 0.22em;
-  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  font-size: 0.68rem;
   font-weight: 600;
 }
 
 .section-header h2,
 .hero-content h1 {
-  font-size: clamp(2.6rem, 4vw, 4.4rem);
-  line-height: 1.05;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .section-header p,
@@ -292,10 +296,10 @@ section {
 
 .hero-cards strong {
   display: block;
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
   color: var(--text);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .hero-panel {
@@ -326,8 +330,9 @@ section {
 }
 
 .featured-panel h2 {
-  font-size: 2.5rem;
-  margin: 22px 0 18px;
+  font-size: 2.1rem;
+  margin: 18px 0 16px;
+  letter-spacing: -0.01em;
 }
 
 .panel-badges {
@@ -390,9 +395,10 @@ section {
 }
 
 .process-grid h3 {
-  font-size: 1.25rem;
-  margin-bottom: 16px;
+  font-size: 1.15rem;
+  margin-bottom: 14px;
   color: var(--text);
+  font-weight: 600;
 }
 
 .services-section,
@@ -434,8 +440,10 @@ section {
 .feature-card h3,
 .project-card h3,
 .testimonial-card strong {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .projects-section .section-header {
@@ -538,8 +546,9 @@ section {
 
 .stats-grid strong {
   display: block;
-  font-size: 2.6rem;
-  margin-bottom: 10px;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  font-weight: 700;
 }
 
 .contact-panel {
@@ -561,8 +570,9 @@ section {
 }
 
 .contact-panel h2 {
-  font-size: clamp(2.1rem, 3.5vw, 3.4rem);
-  margin-bottom: 20px;
+  font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
 }
 
 /* Footer layout and colors are defined below (soft neutral footer palette). */
