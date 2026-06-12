@@ -10,13 +10,20 @@
   <meta property="og:image" content="images/og-banner.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
-  <meta name="theme-color" content="#1e40af" />
+  <meta name="theme-color" content="#4f46e5" />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      var saved = localStorage.getItem('jwh-theme');
+      if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
   <a class="skip-link" href="#site-main">Skip to content</a>
-  <header class="site-header">
+  <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <div class="brand-area">
         <a class="brand" href="#home">Jirani Web Hub</a>
@@ -30,6 +37,7 @@
           <a href="#testimonials">Clients</a>
           <a href="#contact">Contact</a>
         </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
         <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
           <span></span>
           <span></span>
@@ -41,7 +49,10 @@
 
   <main id="site-main">
     <section class="hero" id="home">
-      <div class="hero-content">
+      <div class="hero-mesh" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="hero-content reveal">
         <p class="eyebrow">Trusted digital craftsmanship for Kenyan brands</p>
         <a href="https://wa.me/254799757915" class="btn btn-primary header-cta">Book Consultation</a>
         <h1>We build premium websites, M-Pesa payment flows, and WhatsApp sales systems that convert.</h1>
@@ -50,13 +61,13 @@
           <a href="https://wa.me/254799757915" class="btn btn-primary">Get a Free Quote</a>
           <a href="#projects" class="btn btn-secondary">View Our Work</a>
         </div>
-        <div class="hero-cards">
+        <div class="hero-cards reveal-stagger">
           <article>
-            <strong>15+</strong>
+            <strong class="counter" data-target="15" data-suffix="+">0</strong>
             <span>Projects delivered</span>
           </article>
           <article>
-            <strong>100%</strong>
+            <strong class="counter" data-target="100" data-suffix="%">0</strong>
             <span>Mobile optimized</span>
           </article>
           <article>
@@ -65,7 +76,7 @@
           </article>
         </div>
       </div>
-      <div class="hero-panel">
+      <div class="hero-panel reveal">
         <div class="panel-card featured-panel">
           <span>Premium Digital Solutions</span>
           <h2>Modern design, fast delivery, and payment-ready websites.</h2>
@@ -80,12 +91,12 @@
     </section>
 
     <section class="trust-section">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span>Trusted by local brands</span>
         <h2>Companies and partners who choose our web solutions</h2>
         <p>Established businesses and fast-moving startups trust Jirani Web Hub for smart websites, payments, and WhatsApp sales systems.</p>
       </div>
-      <div class="trust-grid">
+      <div class="trust-grid reveal-stagger">
         <span>Local Retail</span>
         <span>Service Brands</span>
         <span>M-Pesa Ready</span>
@@ -95,12 +106,12 @@
     </section>
 
     <section class="services-section" id="services">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span>Complete Digital Services</span>
         <h2>What we offer for your business</h2>
         <p>From launch-ready websites to payment automation and branding, Jirani Web Hub delivers end-to-end digital solutions.</p>
       </div>
-      <div class="services-grid">
+      <div class="services-grid reveal-stagger">
         <article class="service-card">
           <h3>Landing Pages</h3>
           <p>High-impact single-page websites designed for services, shops, and local brands.</p>
@@ -121,12 +132,12 @@
     </section>
 
     <section class="process-section">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span>How we work</span>
         <h2>One simple process from idea to launch</h2>
         <p>We keep delivery fast, transparent, and focused on growing your business online.</p>
       </div>
-      <div class="process-grid">
+      <div class="process-grid reveal-stagger">
         <article>
           <h3>Research</h3>
           <p>We learn your customers, goals, and the best local payment flow before we design anything.</p>
@@ -147,12 +158,12 @@
     </section>
 
     <section class="projects-section" id="projects">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span>Selected Projects</span>
         <h2>Our recent work</h2>
         <p>These case studies show how we build premium digital experiences for Kenyan businesses.</p>
       </div>
-      <div class="projects-grid">
+      <div class="projects-grid reveal-stagger">
         <article class="project-card featured-project">
           <div class="project-top">
             <span>Premium E-Commerce</span>
@@ -225,11 +236,11 @@
     </section>
 
     <section class="why-section" id="why">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span>Why choose us</span>
         <h2>We build digital brands that feel polished and work reliably.</h2>
       </div>
-      <div class="why-grid">
+      <div class="why-grid reveal-stagger">
         <article class="feature-card">
           <h3>Modern design</h3>
           <p>Premium aesthetics with clean layouts and polished visuals.</p>
@@ -250,11 +261,11 @@
     </section>
 
     <section class="testimonials-section" id="testimonials">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span>Trusted by clients</span>
         <h2>What our customers say</h2>
       </div>
-      <div class="testimonials-grid">
+      <div class="testimonials-grid reveal-stagger">
         <article class="testimonial-card">
           <p>"The new website feels premium and our customers trust us more. Delivery was fast and professional."</p>
           <footer>
@@ -280,17 +291,17 @@
     </section>
 
     <section class="stats-section">
-      <div class="stats-grid">
+      <div class="stats-grid reveal-stagger">
         <article>
-          <strong>15+</strong>
+          <strong class="counter" data-target="15" data-suffix="+">0</strong>
           <span>Successful projects</span>
         </article>
         <article>
-          <strong>10+</strong>
+          <strong class="counter" data-target="10" data-suffix="+">0</strong>
           <span>Happy clients</span>
         </article>
         <article>
-          <strong>100%</strong>
+          <strong class="counter" data-target="100" data-suffix="%">0</strong>
           <span>Mobile optimized</span>
         </article>
         <article>
@@ -341,7 +352,6 @@
 
       navToggle.addEventListener('click', toggleNav);
 
-      // keyboard support (Enter / Space)
       navToggle.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -349,12 +359,129 @@
         }
       });
 
-      // close nav with Escape
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && mainNav.classList.contains('active')) {
           navToggle.setAttribute('aria-expanded', 'false');
           mainNav.classList.remove('active');
         }
+      });
+
+      mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (mainNav.classList.contains('active')) {
+            navToggle.setAttribute('aria-expanded', 'false');
+            mainNav.classList.remove('active');
+          }
+        });
+      });
+    }
+
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const applyThemeIcon = () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      themeToggle.textContent = isDark ? '☀️' : '🌙';
+      themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    };
+    if (themeToggle) {
+      applyThemeIcon();
+      themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('jwh-theme', 'light');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('jwh-theme', 'dark');
+        }
+        applyThemeIcon();
+      });
+    }
+
+    // Scroll progress bar + sticky header shadow
+    const scrollProgress = document.getElementById('scrollProgress');
+    const siteHeader = document.getElementById('siteHeader');
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop || document.body.scrollTop;
+      const max = (doc.scrollHeight - doc.clientHeight) || 1;
+      if (scrollProgress) scrollProgress.style.width = `${(scrollTop / max) * 100}%`;
+      if (siteHeader) siteHeader.classList.toggle('scrolled', scrollTop > 8);
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Scroll-reveal animations
+    const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('in-view'));
+    }
+
+    // Animated counters
+    const counters = document.querySelectorAll('.counter');
+    if (counters.length && 'IntersectionObserver' in window) {
+      const countIo = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = parseInt(el.dataset.target, 10) || 0;
+          const suffix = el.dataset.suffix || '';
+          const duration = 1200;
+          const start = performance.now();
+          const tick = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(eased * target) + suffix;
+            if (progress < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+          countIo.unobserve(el);
+        });
+      }, { threshold: 0.4 });
+      counters.forEach(el => countIo.observe(el));
+    }
+
+    // Active nav link highlighting
+    const sections = ['home', 'services', 'projects', 'why', 'testimonials', 'contact']
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+    const navLinks = document.querySelectorAll('.main-nav a');
+    if (sections.length && 'IntersectionObserver' in window) {
+      const navIo = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinks.forEach(link => {
+              link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+            });
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+      sections.forEach(sec => navIo.observe(sec));
+    }
+    // 3D tilt effect on cards (desktop pointer only)
+    if (window.matchMedia('(hover: hover)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const tiltEls = document.querySelectorAll('.service-card, .feature-card, .project-card, .process-grid article, .testimonial-card');
+      tiltEls.forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+          const rect = el.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+          el.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-4px)`;
+        });
+        el.addEventListener('mouseleave', () => {
+          el.style.transform = '';
+        });
       });
     }
   </script>
